@@ -9,7 +9,7 @@ function useMediaStream(constraints) {
             setMediaStream(stream);
         };
         getMediaStream();
-    }, []);
+    }, [constraints]);
 
     return mediaStream;
 }
