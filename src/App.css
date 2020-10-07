@@ -1,3 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* UTILITY STYLING */
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* CONTAINER STLYING  */
 #Container {
   height: 100vh;
   width: 100vw;
@@ -20,7 +43,16 @@
   z-index: 15;
 }
 
-.navbar-mobile-menu {
+.navbar-mobile-menu-btn {
+  background: none;
+  border: none;
+}
+
+.navbar-mobile-menu-btn:focus {
+  outline: none;
+}
+
+.navbar-mobile-menu-icon {
   min-height: 50px;
 
   font-size: 2rem;

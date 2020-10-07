@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,7 +10,9 @@ function Navbar() {
 
     return (
         <nav className="navbar">
-            <i className="fas fa-bars navbar-mobile-menu" onClick={toggleMenu}></i>
+            <button className="navbar-mobile-menu-btn no-select" onClick={toggleMenu}>
+                <FontAwesomeIcon icon={faBars} className="navbar-mobile-menu-icon" />
+            </button>
             
             <ul style={{
                     display: isMenuOpen ? "flex" : "none"

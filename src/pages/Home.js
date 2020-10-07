@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Home() {
-    const imgUrl = `${process.env.PUBLIC_URL}/img/photoshoot.jpg`;
+    const imgUrl = `/img/photoshoot.min.jpg`;
 
     return (
         <main className="home">

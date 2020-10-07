@@ -6,11 +6,10 @@ function Sidebar() {
     const [ isSidebarVisible, setIsSidebarVisible ] = useState(false);
 
     useEffect(() => {
-        console.log('change');
         setIsSidebarVisible(pathname === '/' ? true : false);
     }, [pathname]);
 
-    const flowerImgUrl = `${process.env.PUBLIC_URL}img/clipart702784.png`;
+    const flowerImgUrl = '/img/flower_banner.min.png';
 
     return (
     <div className="sidebar" style={{display: isSidebarVisible ? 'block' : 'none'}}>

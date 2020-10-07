@@ -1,7 +1,7 @@
 import React from 'react'
 
 function FlowerOverlay({ children }) {
-    const flowerImgUrl = `${process.env.PUBLIC_URL}img/clipart702784.png`;
+    const flowerImgUrl = '/img/flower_banner.min.png';
     
     return (
         <>
