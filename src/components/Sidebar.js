@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 function Sidebar() {
     const { pathname } = useLocation();
+
     const [ isSidebarVisible, setIsSidebarVisible ] = useState(false);
 
     useEffect(() => {
@@ -20,7 +21,7 @@ function Sidebar() {
             <h2 className="sidebar-info-heading">Malik &#38; Aurelia</h2>
             <h3 className="sidebar-info-content">Charlotte, North Carolina</h3>
             <h4 className="sidebar-info-content">Monday, March 99th, 2021</h4>
-            <button className="sidebar-info-rsvp-button">RSVP</button>
+            <Link className="sidebar-info-rsvp-button" to="/RSVP">RSVP</Link>
         </div>
     </div>
     )

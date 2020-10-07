@@ -74,14 +74,26 @@ body {
 
 .navbar li {
   padding: 10px 0;
+
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .navbar li a {
   text-decoration: none;
   color: #a37c60;
+
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 5px 10px;
 }
 .navbar-selected-item {
-  background-color: #a37c60;
+  border-left: 5px solid #a37c60;
+  background-color: rgba(200, 200, 200, 0.6);
+  font-weight: bold;
 }
 
 /* SIDEBAR STYLING */
@@ -96,6 +108,8 @@ body {
   font-family: cursive;
   font-size: 0.75rem;
   background-color: rgba(147, 121, 102, 0.4);
+
+  z-index: 10;
 }
 
 .sidebar-info {
@@ -111,15 +125,21 @@ body {
 }
 
 .sidebar-info-rsvp-button {
+  width: 100px;
   margin-top: 10px;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
   border: none;
   background: #a37c60;
   color: white;
   box-shadow: none;
   text-shadow: none;
+  text-align: center;
   outline: none;
+
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5em;
 }
 
 .sidebar-top-left-img,
