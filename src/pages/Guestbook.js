@@ -1,23 +1,23 @@
-import React, { useRef } from 'react'
-import useMediaStream from '../hooks/useMediaStream.js'
+import React, { useRef } from 'react';
+import useMediaStream from '../hooks/useMediaStream';
 
 function Guestbook() {
-    const videoRef = useRef();
-    const stream = useMediaStream({ audio:true, video:true });
+  const videoRef = useRef();
+  const stream = useMediaStream({ audio: true, video: true });
 
-    if (stream && videoRef.current && !videoRef.current.srcObject) {
-        videoRef.current.srcObject = stream;
-      }
-    
-      // function handleCanPlay() {
-      //   videoRef.current.play();
-      // }
+  if (stream && videoRef.current && !videoRef.current.srcObject) {
+    videoRef.current.srcObject = stream;
+  }
 
-    return (
-        <div className="guestbook">
-            <video className="guestbook-video" ref={videoRef}  controls muted></video>
-        </div>
-    )
+  // function handleCanPlay() {
+  //   videoRef.current.play();
+  // }
+
+  return (
+    <div className="guestbook">
+      <video className="guestbook-video" ref={videoRef} controls muted />
+    </div>
+  );
 }
 
-export default Guestbook
+export default Guestbook;

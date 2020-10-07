@@ -1,31 +1,40 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+const NAV_ITEMS = [
+  { route: '/', label: 'Home' },
+  { route: '/Story', label: 'Story' },
+  { route: '/Gallery', label: 'Gallery' },
+  { route: '/Registry', label: 'Registry' },
+  { route: '/Guestbook', label: 'Guestbook' },
+  { route: '/RSVP', label: 'RSVP' },
+];
 
 function Navbar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-    return (
-        <nav className="navbar">
-            <button className="navbar-mobile-menu-btn no-select" onClick={toggleMenu}>
-                <FontAwesomeIcon icon={faBars} className="navbar-mobile-menu-icon" />
-            </button>
-            
-            <ul style={{
-                    display: isMenuOpen ? "flex" : "none"
-                }}>
-                <li><NavLink activeClassName="navbar-selected-item" exact to="/">Home</NavLink></li>
-                <li><NavLink activeClassName="navbar-selected-item" to="/Story">Our Story</NavLink></li>
-                <li><NavLink activeClassName="navbar-selected-item" to="/Gallery">Gallery</NavLink></li>
-                <li><NavLink activeClassName="navbar-selected-item" to="/Registry">Registry</NavLink></li>
-                <li><NavLink activeClassName="navbar-selected-item" to="/Guestbook">Guestbook</NavLink></li>
-                <li><NavLink activeClassName="navbar-selected-item" to="/RSVP">RSVP</NavLink></li>
-            </ul>
-        </nav>
-    )
+  return (
+    <nav className="navbar">
+      <button type="button" className="navbar-mobile-menu-btn no-select" onClick={toggleMenu}>
+        <FontAwesomeIcon icon={faBars} className="navbar-mobile-menu-icon" />
+      </button>
+
+      <ul style={{
+        display: isMenuOpen ? 'flex' : 'none',
+      }}
+      >
+        {NAV_ITEMS.map((item) => (
+          <li key={item.label}>
+            <NavLink onClick={toggleMenu} activeClassName="navbar-selected-item" exact to={item.route}>{item.label}</NavLink>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;

@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function Registry() {
-    
-    return (
-        <div>
-            Registry
-        </div>
-    )
+  return (
+    <div>
+      Registry
+    </div>
+  );
 }
 
-export default Registry
+export default Registry;

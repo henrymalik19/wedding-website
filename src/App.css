@@ -80,6 +80,24 @@ body {
   justify-content: flex-end;
 }
 
+/* experimental */
+.navbar button {
+  padding: 5px 10px;
+
+  font-family: fantasy;
+  font-size: 1.25rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  text-decoration: none;
+  color: #a37c60;
+
+  border: none;
+  background: none;
+}
+/* experimental */
+
 .navbar li a {
   text-decoration: none;
   color: #a37c60;
