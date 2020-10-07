@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const NAV_ITEMS = [
   { route: '/', label: 'Home' },
@@ -20,16 +20,13 @@ function Navbar() {
   return (
     <nav className="navbar">
       <button type="button" className="navbar-mobile-menu-btn no-select" onClick={toggleMenu}>
-        <FontAwesomeIcon icon={faBars} className="navbar-mobile-menu-icon" />
+        <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} className="navbar-mobile-menu-icon" />
       </button>
 
-      <ul style={{
-        display: isMenuOpen ? 'flex' : 'none',
-      }}
-      >
+      <ul className={`navbar-menu ${isMenuOpen ? 'navbar-menu-open' : ''}`}>
         {NAV_ITEMS.map((item) => (
           <li key={item.label}>
-            <NavLink onClick={toggleMenu} activeClassName="navbar-selected-item" exact to={item.route}>{item.label}</NavLink>
+            <NavLink activeClassName="navbar-selected-item" exact to={item.route}>{item.label}</NavLink>
           </li>
         ))}
       </ul>
