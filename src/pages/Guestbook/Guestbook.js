@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
-import useMediaStream from '../hooks/useMediaStream';
+import useMediaStream from '../../hooks/useMediaStream';
 
 function Guestbook() {
   const videoRef = useRef();
-  const stream = useMediaStream({ audio: true, video: true });
+  const stream = useMediaStream();
 
   if (stream && videoRef.current && !videoRef.current.srcObject) {
     videoRef.current.srcObject = stream;
@@ -15,6 +15,9 @@ function Guestbook() {
 
   return (
     <div className="guestbook">
+      {console.log('called')}
+      <h3>Guestbook</h3>
+      <p>Leave a Message for the newlyweds</p>
       <video className="guestbook-video" ref={videoRef} controls muted />
     </div>
   );

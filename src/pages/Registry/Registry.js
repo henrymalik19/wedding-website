@@ -2,8 +2,8 @@ import React from 'react';
 
 function Registry() {
   return (
-    <div>
-      Registry
+    <div className="registry">
+      <h3>Registry</h3>
     </div>
   );
 }

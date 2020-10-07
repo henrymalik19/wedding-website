@@ -2,9 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 
-import FlowerOverlay from './components/FlowerOverlay';
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
+import { FlowerOverlay, Navbar, Sidebar } from './components';
 import Routes from './Routes';
 
 function App() {

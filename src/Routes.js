@@ -4,10 +4,9 @@ import {
   Route,
 } from 'react-router-dom';
 
-import Home from './pages/Home';
-import Story from './pages/Story';
-import Registry from './pages/Registry';
-import Guestbook from './pages/Guestbook';
+import {
+  Home, Registry, Guestbook, RSVP, Story, Gallery,
+} from './pages';
 
 function Routes() {
   return (
@@ -18,11 +17,17 @@ function Routes() {
       <Route path="/Story">
         <Story />
       </Route>
+      <Route path="/Gallery">
+        <Gallery />
+      </Route>
       <Route path="/Registry">
         <Registry />
       </Route>
       <Route path="/Guestbook">
         <Guestbook />
+      </Route>
+      <Route path="/RSVP">
+        <RSVP />
       </Route>
     </Switch>
   );

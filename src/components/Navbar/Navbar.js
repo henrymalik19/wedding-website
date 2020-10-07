@@ -26,7 +26,7 @@ function Navbar() {
       <ul className={`navbar-menu ${isMenuOpen ? 'navbar-menu-open' : ''}`}>
         {NAV_ITEMS.map((item) => (
           <li key={item.label}>
-            <NavLink activeClassName="navbar-selected-item" exact to={item.route}>{item.label}</NavLink>
+            <NavLink onClick={toggleMenu} activeClassName="navbar-selected-item" exact to={item.route}>{item.label}</NavLink>
           </li>
         ))}
       </ul>
